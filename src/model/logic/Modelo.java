@@ -18,7 +18,7 @@ public class Modelo {
 	 */
 	public Modelo()
 	{
-		datos = new ArregloDinamico(7);
+		datos = new ArregloDinamico<Integer>(7);
 	}
 	
 	/**
@@ -27,7 +27,7 @@ public class Modelo {
 	 */
 	public Modelo(int capacidad)
 	{
-		datos = new ArregloDinamico(capacidad);
+		datos = new ArregloDinamico<Integer>(capacidad);
 	}
 	
 	/**
@@ -43,7 +43,7 @@ public class Modelo {
 	 * Requerimiento de agregar dato
 	 * @param dato
 	 */
-	public void agregar(String dato)
+	public void agregar(int dato)
 	{	
 		datos.agregar(dato);
 	}
@@ -53,9 +53,9 @@ public class Modelo {
 	 * @param dato Dato a buscar
 	 * @return dato encontrado
 	 */
-	public String buscar(String dato)
+	public int buscar(int dato)
 	{
-		return datos.buscar(dato);
+		return (Integer) datos.buscar(dato);
 	}
 	
 	/**
@@ -63,9 +63,9 @@ public class Modelo {
 	 * @param dato Dato a eliminar
 	 * @return dato eliminado
 	 */
-	public String eliminar(String dato)
+	public int eliminar(Integer dato)
 	{
-		return datos.eliminar(dato);
+		return (Integer) datos.eliminar(dato);
 	}
 
 
